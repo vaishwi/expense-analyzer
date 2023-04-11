@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@aws-sdk/client-ssm": "^3.309.0",
+    
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@material-ui/core": "^4.12.4",
+    
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.11",
     "@mui/styles": "^5.11.16",
