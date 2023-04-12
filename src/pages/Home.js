@@ -7,7 +7,7 @@ import UserPool from '../UserPool';
 import DataAnalysisResultComponent from './DataAnalysisResultComponent';
 import Logout from './Logout';
 
-// const APP_LINK = "https://xqp7wu6kz9.execute-api.us-east-1.amazonaws.com/test/"
+
 const APP_LINK = process.env.REACT_APP_API_LINK
 // const S3_UPLOAD_URL = APP_LINK + "uploadimage"
 const S3_UPLOAD_URL = APP_LINK + process.env.REACT_APP_S3_UPLOAD_PATH
@@ -190,7 +190,6 @@ export default function Home() {
             {image && (
                 <div>
                     {/* <img src={URL.createObjectURL(image)} width={250} height={250} alt="Uploaded Image" /> */}
-                    {/* <img src="https://expense-project.s3.amazonaws.com/vaishwi.p%40ahduni.edu.in/1.jpeg" width={250} height={250} alt="Uploaded Image" /> */}
                     {/* /<img src={postImage.myFile} width={250} height={250} alt="Uploaded Image" /> */}
 
                     {console.log(analyzedReceiptData)}
