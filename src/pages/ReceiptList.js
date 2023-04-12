@@ -9,6 +9,7 @@ import Logout from './Logout';
 
 const APP_LINK = process.env.REACT_APP_API_LINK
 const FETCH_HISTORY_URL = APP_LINK+process.env.REACT_APP_FETCH_HISTORY_PATH
+const jwtToken = localStorage.getItem("jwtToken")
 export default function ReceiptList(){
 
     const naviagte = useNavigate();
