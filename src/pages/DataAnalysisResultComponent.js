@@ -73,7 +73,7 @@ const DataAnalysisResultComponent = (analyzedReceiptData) => {
     const classes = useStyles();
     const userEmail = localStorage.getItem("userEmail");
 
-    //   const organizerId = useLocation().state.organizerId;
+
     const naviagte = useNavigate();
 
 
@@ -86,13 +86,11 @@ const DataAnalysisResultComponent = (analyzedReceiptData) => {
 
     return (
         <Container sx={{ ml: 10 ,mt:10}}>
-            {/* <Container> */}
-            {/* <Grid container spacing={10} columns={{ xs: 4, sm: 8, md: 12 }}> */}
+            
             <h1> {} </h1>
             <Grid container spacing={3}>
 
-                {/* <Grid item  xs={2} sm={4} md={4}> */}
-                {/* <Grid xs="auto"> */}
+             
                 <Grid>
                     <Paper elevation={3} style={{ margin: "16px 0px" }}  >
                         <img src={`data:image/jpeg;base64,${receiptData.image}`} width={400} height={400} alt="Uploaded Image" />
@@ -100,8 +98,7 @@ const DataAnalysisResultComponent = (analyzedReceiptData) => {
                 </Grid>
 
                 <Grid xs></Grid>
-                {/* <Grid item xs={2} sm={4} md={4} sx={{ mt: 2 }}> */}
-                {/* <Grid xs={6} sx={{ mt: 2 }}> */}
+                
                 <Grid>
                     <Paper elevation={3} className={classes.contactInfo}>
                         <Typography variant="h5" align="center">
@@ -202,7 +199,7 @@ const DataAnalysisResultComponent = (analyzedReceiptData) => {
                     </Paper>
                 </Grid>
 
-                {/* <Grid item xs={2} sm={4} md={4} sx={{ mt: 2 }}> */}
+                
                 <Grid xs></Grid>
                 <Grid>
                     <Paper elevation={3} className={classes.contactInfo}>
