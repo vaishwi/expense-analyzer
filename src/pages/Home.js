@@ -3,7 +3,7 @@ import { Button, Typography, Box } from '@mui/material';
 import { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-import UserPool from '../UserPool';
+
 import DataAnalysisResultComponent from './DataAnalysisResultComponent';
 import Logout from './Logout';
 
@@ -13,6 +13,8 @@ const APP_LINK = process.env.REACT_APP_API_LINK
 const S3_UPLOAD_URL = APP_LINK + process.env.REACT_APP_S3_UPLOAD_PATH
 // const RECEIPT_ANALYZE_URL = APP_LINK + "analyzereceipt"
 const RECEIPT_ANALYZE_URL = APP_LINK + process.env.REACT_APP_RECEIPT_ANALYZE_PATH
+
+const jwtToken = localStorage.getItem("jwtToken")
 
 export default function Home() {
 
@@ -59,6 +61,9 @@ export default function Home() {
         await axios({
             url: S3_UPLOAD_URL,
             method: "POST",
+            headers:{
+                authorization:jwtToken
+            },
             data: imageUploadData
         })
             // Handle the response from backend here
@@ -87,6 +92,9 @@ export default function Home() {
         axios({
             url: RECEIPT_ANALYZE_URL,
             method: "POST",
+            headers:{
+                authorization:jwtToken
+            },
             data: dataToAnalyze
         }).then((res) => {
             console.log(res.data)
@@ -190,6 +198,7 @@ export default function Home() {
             {image && (
                 <div>
                     {/* <img src={URL.createObjectURL(image)} width={250} height={250} alt="Uploaded Image" /> */}
+                   
                     {/* /<img src={postImage.myFile} width={250} height={250} alt="Uploaded Image" /> */}
 
                     {console.log(analyzedReceiptData)}

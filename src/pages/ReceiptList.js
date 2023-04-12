@@ -6,6 +6,7 @@ import {Button, Typography, Box} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Logout from './Logout';
 
+
 const APP_LINK = process.env.REACT_APP_API_LINK
 const FETCH_HISTORY_URL = APP_LINK+process.env.REACT_APP_FETCH_HISTORY_PATH
 export default function ReceiptList(){
@@ -20,12 +21,15 @@ export default function ReceiptList(){
         const data_json = { userEmail: userEmail };
         console.log(data_json);
         axios({
-          // Endpoint to fetch organizer profile
+          
           url: FETCH_HISTORY_URL,
           method: "POST",
+          headers:{
+            authorization:jwtToken
+        },
           data: data_json,
         })
-          // Handle the response from backend here
+          
           .then((res) => {
            console.log(res)
            console.log(typeof(res.data.history))

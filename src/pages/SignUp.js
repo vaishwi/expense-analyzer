@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
+// import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 
 import Box from '@mui/material/Box';
@@ -7,11 +8,20 @@ import Grid from '@mui/material/Grid';
 import {Link} from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Userpool from '../UserPool';
 import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme();
+
+
+// email
+// : 
+// "vaishwipatel82110@gmail.com"
+// password
+// : 
+// "vaishwi1223"
 
 export default function SignUp() {
 
@@ -67,6 +77,23 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={theme}>
+      {/* <Grid container component="main" sx={{ height: '100vh' }}> */}
+        {/* <CssBaseline /> */}
+        {/* <Grid
+          item
+          xs={false}
+          sm={4}
+          md={7}
+          sx={{
+            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: (t) =>
+              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        /> */}
+        {/* <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square> */}
             <Grid sx={{backgroundPosition: 'center'}}>
           <Box
             sx={{
@@ -133,6 +160,7 @@ export default function SignUp() {
             </Box>
           </Box>
         </Grid>
+      {/* </Grid> */}
     </ThemeProvider>
   );
 }

@@ -7,30 +7,22 @@ import React, { useEffect } from "react";
 import { makeStyles } from "@mui/styles";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { useLocation } from "react-router-dom";
+
 import {
-    Avatar,
-    Button,
     Container,
     Grid,
     Paper,
     Typography,
     createTheme,
-    Divider,
-    Box
 } from "@mui/material";
 import {
-    LocationOn,
-    EmailRounded,
     Phone,
     Business,
     PersonAdd,
 } from "@mui/icons-material";
-import axios from "axios";
+
 
 const theme = createTheme();
-const SERVER_ERROR = "Sever Error. Please try again.";
-const SUBSCRIPTION_MESSAGE = "Successfully Subscribed.";
 
 
 
@@ -74,23 +66,13 @@ const DataAnalysisResultComponent = (analyzedReceiptData) => {
     const userEmail = localStorage.getItem("userEmail");
 
 
-    const naviagte = useNavigate();
-
-
-
-
-    const [openDialog, setOpenDialog] = useState(false);
-    const [dialogDiscription, setDialogDiscription] = useState("");
-
-
 
     return (
         <Container sx={{ ml: 10 ,mt:10}}>
-            
+
             <h1> {} </h1>
             <Grid container spacing={3}>
 
-             
                 <Grid>
                     <Paper elevation={3} style={{ margin: "16px 0px" }}  >
                         <img src={`data:image/jpeg;base64,${receiptData.image}`} width={400} height={400} alt="Uploaded Image" />
@@ -98,7 +80,7 @@ const DataAnalysisResultComponent = (analyzedReceiptData) => {
                 </Grid>
 
                 <Grid xs></Grid>
-                
+
                 <Grid>
                     <Paper elevation={3} className={classes.contactInfo}>
                         <Typography variant="h5" align="center">
