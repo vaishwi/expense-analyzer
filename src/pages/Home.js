@@ -57,12 +57,14 @@ export default function Home() {
     const uploadImagetoS3 = async (imageUploadData) => {
 
         console.log("In upload Image to s3")
+        console.log(jwtToken)
+        console.log(typeof(jwtToken))
         setProcessMessage("Uploading image to server....")
         await axios({
             url: S3_UPLOAD_URL,
             method: "POST",
             headers:{
-                authorization:jwtToken
+                Authorization:jwtToken
             },
             data: imageUploadData
         })
@@ -93,7 +95,7 @@ export default function Home() {
             url: RECEIPT_ANALYZE_URL,
             method: "POST",
             headers:{
-                authorization:jwtToken
+                Authorization:jwtToken
             },
             data: dataToAnalyze
         }).then((res) => {
