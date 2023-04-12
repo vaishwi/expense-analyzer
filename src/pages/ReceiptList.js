@@ -26,7 +26,7 @@ export default function ReceiptList(){
           url: FETCH_HISTORY_URL,
           method: "POST",
           headers:{
-            authorization:jwtToken
+            Authorization:jwtToken
         },
           data: data_json,
         })
