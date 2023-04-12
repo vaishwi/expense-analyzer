@@ -6,7 +6,6 @@ import {Button, Typography, Box} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Logout from './Logout';
 
-// const APP_LINK ="https://xqp7wu6kz9.execute-api.us-east-1.amazonaws.com/test/"
 const APP_LINK = process.env.REACT_APP_API_LINK
 const FETCH_HISTORY_URL = APP_LINK+process.env.REACT_APP_FETCH_HISTORY_PATH
 export default function ReceiptList(){
